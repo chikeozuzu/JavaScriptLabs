@@ -20,7 +20,7 @@ const area = PI * radius * radius; // in square meters
 //  The area is starting with 20 plants.
 const initialPlants = 20;
 //  The plants double in number every week.
-const growthRate = 2; 
+const growthRate = 2;
 
 //  Task 1: Predict the plant growth after a specific number of weeks (1, 2, and 3 weeks).
 const weeksToPredict = [1, 2, 3];
@@ -39,3 +39,47 @@ switch (weeksToPredict) {
         break;
 }
 
+/*  Task 2: Implement control flow to make decisions on whether the plants should be:
+    (a) Pruned, to stop them from exceeding the capacity of the garden: 
+    This condition should be met if the plant count after the given number of weeks 
+    is greater than 80% of the maximum capacity of the garden.
+    (b) Monitored, if they are growing at an acceptable rate: 
+    This condition should be met if the plant count is between 50% and 80% 
+    of the maximum capacity of the garden after the given number of weeks.
+    (c) Planted, if there is room to plant more plants: 
+    This condition should be met if the plant count after the given number of weeks 
+    is less than 50% of the maximum capacity of the garden.
+*/
+const maxPlants = area / spacePerPlant;
+console.log(`The maximum capacity of the garden is ${maxPlants} plants.`);
+
+const plantCount = initialPlants * (growthRate ** weeksToPredict);
+switch (weeksToPredict) {
+    case 1:
+        if (plantCount > 0.8 * maxPlants) {
+            console.log(`After ${weeksToPredict} week(s), the plant count is ${plantCount}. Action: Prune the plants.`);
+        } else if (plantCount > 0.5 * maxPlants && plantCount <= 0.8 * maxPlants) {
+            console.log(`After ${weeksToPredict} week(s), the plant count is ${plantCount}. Action: Monitor the plants.`);
+        } else {
+            console.log(`After ${weeksToPredict} week(s), the plant count is ${plantCount}. Action: Plant more plants.`);
+        }
+        break;
+    case 2:
+        if (plantCount > 0.8 * maxPlants) {
+            console.log(`After ${weeksToPredict} week(s), the plant count is ${plantCount}. Action: Prune the plants.`);
+        } else if (plantCount > 0.5 * maxPlants && plantCount <= 0.8 * maxPlants) {
+            console.log(`After ${weeksToPredict} week(s), the plant count is ${plantCount}. Action: Monitor the plants.`);
+        } else {
+            console.log(`After ${weeksToPredict} week(s), the plant count is ${plantCount}. Action: Plant more plants.`);
+        }
+        break;
+    case 3:
+        if (plantCount > 0.8 * maxPlants) {
+            console.log(`After ${weeksToPredict} week(s), the plant count is ${plantCount}. Action: Prune the plants.`);
+        } else if (plantCount > 0.5 * maxPlants && plantCount <= 0.8 * maxPlants) {
+            console.log(`After ${weeksToPredict} week(s), the plant count is ${plantCount}. Action: Monitor the plants.`);
+        } else {
+            console.log(`After ${weeksToPredict} week(s), the plant count is ${plantCount}. Action: Plant more plants.`);
+        }
+        break;
+};
