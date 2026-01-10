@@ -92,3 +92,15 @@ switch (weeksToPredict) {
     and did not prune them for 10 weeks. 
     Also, if the space remained circular, what would be the radius of this expanded garden?
 */
+const initialPlantsPart2 = 100;
+const weeksPart2 = 10;
+const plantCountPart2 = initialPlantsPart2 * (growthRate ** weeksPart2);
+console.log(`After ${weeksPart2} weeks, starting with ${initialPlantsPart2} plants, there will be ${plantCountPart2} plants.`);
+
+const requiredAreaPart2 = plantCountPart2 * spacePerPlant;
+console.log(`The required area to accommodate ${plantCountPart2} plants is ${requiredAreaPart2} square meters.`);
+const additionalAreaPart2 = requiredAreaPart2 - area;
+console.log(`Therefore, the additional area required is ${additionalAreaPart2} square meters.`);
+
+const newRadiusPart2 = (requiredAreaPart2 / PI) ** 0.5;
+console.log(`If the space remained circular, the radius of the expanded garden would need to be ${newRadiusPart2} meters.`);
