@@ -83,3 +83,12 @@ switch (weeksToPredict) {
         }
         break;
 };
+
+//  Part 2
+
+/*  The conservation area in which the garden is located has multiple other gardens. 
+    Using the already created logic, determine:
+    The amount of additional space that would be required if the scientists were to start with 100 plants, 
+    and did not prune them for 10 weeks. 
+    Also, if the space remained circular, what would be the radius of this expanded garden?
+*/
