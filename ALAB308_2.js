@@ -104,3 +104,13 @@ console.log(`Therefore, the additional area required is ${additionalAreaPart2} s
 
 const newRadiusPart2 = (requiredAreaPart2 / PI) ** 0.5;
 console.log(`If the space remained circular, the radius of the expanded garden would need to be ${newRadiusPart2} meters.`);
+
+
+//  Part 3
+
+/*  The scientists decided not to listen to the recommendations, and have instead started with 100 plants 
+    in the original 5-meter-radius garden.
+    Use try and catch to wrap the below scenario in an error-handling block. 
+    If the amount of space required to hold the originally provided number of plants exceeds the amount of space available, 
+    throw a new error and log an appropriate message.
+*/
