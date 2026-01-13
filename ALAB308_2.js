@@ -114,3 +114,13 @@ console.log(`If the space remained circular, the radius of the expanded garden w
     If the amount of space required to hold the originally provided number of plants exceeds the amount of space available, 
     throw a new error and log an appropriate message.
 */
+try {
+    const initialPlantsPart3 = 100;
+    const requiredAreaPart3 = initialPlantsPart3 * spacePerPlant;
+    if (requiredAreaPart3 > area) {
+        throw new Error("The required area exceeds the available space.");
+    }
+    console.log(`The required area for ${initialPlantsPart3} plants is ${requiredAreaPart3} square meters.`);
+} catch (error) {
+    console.log(error.message);
+}
