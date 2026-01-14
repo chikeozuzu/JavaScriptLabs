@@ -28,3 +28,49 @@ for (let i = 1; i <= 100; i++) {
 }
 
 //  Part 2
+
+//  Finding Prime Numbers
+/*  Declare an arbitrary number, n.
+    Create a loop that searches for the next prime number, starting at n and incrementing from there.
+    As soon as you find the prime number, log that number and exit the loop.
+*/
+const n = 29; // arbitrary number
+let foundPrime = false;
+let currentNumber = n;
+while (!foundPrime) {
+    let isPrime = true;
+    for (let i = 2; i <= Math.sqrt(currentNumber); i++) {
+        if (currentNumber % i == 0) {
+            isPrime = false;
+            break;
+        }
+    }
+    if (isPrime && currentNumber > 1) {
+        console.log(`The next prime number after ${n} is ${currentNumber}`);
+        foundPrime = true;
+    } else {
+        currentNumber++;
+    }
+}
+
+//  Rewritting the code above, if n is equal to 4, the loop should log 5. 
+//  Similarly, if n is 5, it should log 7, and if n is 9, it should log 11.
+//  That is, the loop should always find the next prime number greater than n.
+const m = 4; // arbitrary number
+let foundNextPrime = false;
+let nextNumber = m + 1;
+while (!foundNextPrime) {
+    let isNextPrime = true;
+    for (let i = 2; i <= Math.sqrt(nextNumber); i++) {
+        if (nextNumber % i == 0) {
+            isNextPrime = false;
+            break;
+        }
+    }
+    if (isNextPrime && nextNumber > 1) {
+        console.log(`The next prime number after ${m} is ${nextNumber}`);
+        foundNextPrime = true;
+    } else {
+        nextNumber++;
+    }
+}
