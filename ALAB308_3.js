@@ -88,3 +88,9 @@ while (!foundNextPrime) {
         There will only be 4 cells per row.
         There will be no escaped characters other than “\n”.
 */
+const csvString = "ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor’s Assistant,26";
+const rows = csvString.split('\n');
+for (let row of rows) {
+    const cells = row.split(',');
+    console.log(`Row Data: ID=${cells[0]}, Name=${cells[1]}, Occupation=${cells[2]}, Age=${cells[3]}`);
+}
