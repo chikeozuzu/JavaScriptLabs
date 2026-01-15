@@ -74,3 +74,17 @@ while (!foundNextPrime) {
         nextNumber++;
     }
 }
+
+//  Part 3
+
+//  Processing CSV Strings
+/*  Loop through the characters of a given CSV string.
+    Store each “cell” of data in a variable.
+    When you encounter a comma, move to the next cell.
+    When you encounter the “\r\n” sequence, move to the next “row.”
+    Log each row of data.
+    Assumptions:
+        The CSV string uses commas as delimiters.
+        There will only be 4 cells per row.
+        There will be no escaped characters other than “\n”.
+*/
