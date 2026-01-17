@@ -24,3 +24,6 @@ for (let i = 1; i < csvRows.length; i++) {
     dataObjects.push(dataObject);
 }
 console.log(dataObjects);
+
+//  Part 2
+
