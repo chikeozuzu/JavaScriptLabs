@@ -80,3 +80,14 @@ console.log(objectArray);
 
 //  Part 4
 
+/*  Using array methods, accomplish the following tasks, in order upon the result of Part 3:
+    Remove the last element from the sorted array.
+    Insert the following object at index 1: { id: "48", name: "Barry", occupation: "Runner", age: "25" }
+    Add the following object to the end of the array: { id: "7", name: "Bilbo", occupation: "None", age: "111" }
+*/
+objectArray.pop();
+objectArray.splice(1, 0, { id: "48", name: "Barry", occupation: "Runner", age: "25" });
+objectArray.push({ id: "7", name: "Bilbo", occupation: "None", age: "111" });
+console.log(objectArray);
+//  The objectArray variable has been modified as specified.
+
