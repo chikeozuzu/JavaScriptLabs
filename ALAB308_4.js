@@ -95,3 +95,13 @@ console.log(objectArray);
 //  Part 5
 
 //  As a final task, transform the final set of data back into CSV format.
+let finalCsv = headerRow.join(',') + '\n';
+for (let obj of objectArray) {
+    const row = [];
+    for (let key of headerRow) {
+        row.push(obj[key]);
+    }
+    finalCsv += row.join(',') + '\n';
+}
+console.log(finalCsv);
+//  The finalCsv variable now contains the data in CSV format, reconstructed from the object array.
