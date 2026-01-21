@@ -74,3 +74,7 @@ for (let i = 1; i < twoDimensionalArray.length; i++) {
     objectArray.push(obj);
 }
 console.log(objectArray);
+
+//  The objectArray variable now contains an array of objects.
+//  Each object represents a row of data, with keys derived from the header row in lowercase format.
+
