@@ -101,3 +101,4 @@ console.log("Sorted, Filtered, Mapped Data:", dataArray);
 console.log("Total Age:", totalAge);
 console.log("Average Age:", averageAge);
 
+//  Part 3
