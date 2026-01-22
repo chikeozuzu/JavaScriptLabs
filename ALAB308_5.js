@@ -66,3 +66,38 @@ console.log("Print numbers from 1 to 5:");
 printNumbers(5);
 
 //  Part 2
+
+/*  Task:
+    Use callback functions alongside Array methods to accomplish the following:
+    Sort the array by age.
+    Filter the array to remove entries with an age greater than 50.
+    Map the array to change the “occupation” key to “job” and increment every age by 1.
+    Use the reduce method to calculate the sum of the ages.
+    Then use the result to calculate the average age.
+*/
+let dataArray = [
+    { id: "42", name: "Bruce", occupation: "Knight", age: "41" },
+    { id: "48", name: "Barry", occupation: "Runner", age: "25" },
+    { id: "57", name: "Bob", occupation: "Fry Cook", age: "19" },
+    { id: "63", name: "Blaine", occupation: "Quiz Master", age: "58" },
+    { id: "7", name: "Bilbo", occupation: "None", age: "111" }];
+
+// Sort by age
+dataArray.sort((a, b) => parseInt(a.age) - parseInt(b.age));
+// Filter out entries with age greater than 50
+dataArray = dataArray.filter(entry => parseInt(entry.age) <= 50);
+// Map to change "occupation" to "job" and increment age by 1
+dataArray = dataArray.map(entry => ({
+    ...entry,
+    job: entry.occupation,
+    age: parseInt(entry.age) + 1
+}));
+delete entry.occupation;
+// Reduce to calculate the sum of ages
+const totalAge = dataArray.reduce((sum, entry) => sum + parseInt(entry.age), 0);
+// Calculate average age
+const averageAge = totalAge / dataArray.length;
+console.log("Sorted, Filtered, Mapped Data:", dataArray);
+console.log("Total Age:", totalAge);
+console.log("Average Age:", averageAge);
+
