@@ -102,3 +102,34 @@ console.log("Total Age:", totalAge);
 console.log("Average Age:", averageAge);
 
 //  Part 3
+
+/*  Task:
+    Develop functions that accomplish the following:
+    Take an object and increment its age field.
+    Take an object, make a copy, and increment the age field of the copy. Return the copy.
+        For each of the functions above, if the object does not yet contain an age field, create one and set it to 0. 
+        Also, add (or modify, as appropriate) an updated_at field that stores a Date object with the current time.
+*/
+function incrementAge(obj) {
+    if (!obj.hasOwnProperty('age')) {
+        obj.age = 0;
+    }
+    obj.age++;
+    obj.updated_at = new Date();
+}
+function incrementAgeCopy(obj) {
+    const copy = { ...obj };
+    if (!copy.hasOwnProperty('age')) {
+        copy.age = 0;
+    }
+    copy.age++;
+    copy.updated_at = new Date();
+    return copy;
+}
+let person = { name: "Alice" };
+incrementAge(person);
+console.log("After incrementAge:", person);
+let newPerson = incrementAgeCopy(person);
+console.log("After incrementAgeCopy:", newPerson);
+console.log("Original person remains unchanged:", person);
+
