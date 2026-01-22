@@ -65,3 +65,4 @@ console.log("Strings longer than 4:", stringsLongerThan(strings, 4));
 console.log("Print numbers from 1 to 5:");
 printNumbers(5);
 
+//  Part 2
